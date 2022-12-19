@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>User Preferences</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+	<body>
+        <div class="desc">
+			<div class="background">
+				<div class="shape"></div>
+				<div class="shape"></div>
+			</div>
+			<form action="{{ url_for('hello') }}" method="post">
+				<h3>Enter Hotel Preferences</h3>
+				<label for="Location">
+					<i class="fas fa-user"></i>
+				</label>
+				<select name="location" id="location">
+					<option value="" disabled selected>Country</option>
+					<option value="Netherlands">Netherlands</option>
+					<option value="UK">UK</option>
+					<option value="France">France</option>
+					<option value="Spain">Spain</option>
+					<option value="Italy">Italy</option>
+					<option value="Austria">Austria</option>
+				</select>
+
+				<label for="Description">
+					<i class="fas fa-lock"></i>
+				</label>
+				<textarea name="description">Description</textarea>
+				<br><br>
+				<input class="button" type="submit" value="Search">
+			</form>
+        </div>
+	</body>
+</html>
